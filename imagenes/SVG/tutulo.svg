@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1097.02 347.64">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Broadway, Broadway;
+        font-size: 128px;
+        stroke-width: .5px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+      .cls-2{
+      animation: rebote 3s infinite ease-in-out;
+      }
+         @keyframes rebote {
+        0%, 100% {
+    transform: translateY(50); 
+}
+    50% {
+    transform: translateY(25px); 
+} }
+
+      .cls-3 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-4 {
+        letter-spacing: .02em;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa_1">
+    <text class="cls-1" transform="translate(.25 147)"><tspan x="0" y="0">bi</tspan><tspan class="cls-4" x="142.5" y="0">t</tspan><tspan x="200.38" y="0">aco</tspan><tspan class="cls-3" x="439.31" y="0">r</tspan><tspan x="503.88" y="0">a </tspan></text>
+    <path class="cls-2" d="M630.6,24.81c1.23,1.69,25.21,31.5,25.21,31.51-.95-1.18,16.14-9.15,17.81-9.49,6.85-1.41,15.25.46,18.24,6.28,1.56,3.03,1.38,6.6.41,9.82-1.64,5.43-5.36,10.11-9.15,14.54-15.27,17.82-33.47,33.51-50.68,49.74l3.69,36.01h111.16l.15-45.01s-45.51,1.69-45.51,1.69l13.73-12.91c8.16-7.68,14.51-16.1,21.03-25.04,4.22-5.78,8.41-11.72,10.41-18.43.91-3.07,1.35-6.24,1.57-9.41.61-8.76-.39-17.7-3.94-25.86-3.54-8.15-9.74-15.48-18.04-19.88-2.57-1.37-5.32-2.44-8.11-3.38-15.5-5.2-32.67-5.78-48.67-2.22-8.09,1.8-15.91,4.66-23.09,8.52s-11.42,7.8-16.24,13.53Z"/>
+  </g>
+</svg>
+
+
+ 

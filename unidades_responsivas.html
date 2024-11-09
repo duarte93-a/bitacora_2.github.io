@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades CSS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="unidades_responsivas.css">
+    <link rel="stylesheet" href="menu_avansa/Untitled-1.css">
+    <link rel="stylesheet" href="css_bit2.css">
+</head>
+
+<body>
+
+
+    <section id="menu_desplave">
+        <div class="menu-container">
+            <button id="menu-toggle" class="menu-toggle">Menú</button>
+            <div id="menu" class="menu">
+              <ul>
+                <li><a href="index.html">Introducción al modelo flexbox </a></li>
+                <li><a href="imagenes_responsivas.html">Imágenes responsivas </a></li>
+                <li><a href="tipografia_responsiva.html">Tipografía responsiva </a></li>
+                <li><a href="root.html">root</a></li>
+                <li><a href="regla support.html">Regla support </a></li>
+                <li><a href="grid.html">Grid </a></li>
+                <li><a href="framework.html">Framework</a> </li>
+                <li><a href="first_movil.html">First móvil </a></li>
+                <li><a href="unidades_responsivas.html">unidades_responsivas</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <script src="menu_avansa/script.js"></script>
+    
+    </section>
+
+
+
+
+
+
+
+    <div class="grid-container1">
+        <div class="grid-item itema">
+            <section id="titulo">
+            <img src="imagenes/SVG/tutulo.svg" alt="bit">
+            </section></div>
+
+          
+
+   
+    <nav class="blue">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Unidades CSS</a>
+        </div>
+    </nav>
+
+  
+    <div class="container">
+
+       
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Objetivo</span>
+                <p class="content">Ser capaces de comprender y aplicar diversas unidades de CSS, con un enfoque especial en las unidades responsivas y efectivas que se ajustan a diferentes tamaños y resoluciones de pantalla.</p>
+            </div>
+        </div>
+
+       
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Unidades Absolutas</span>
+                <p class="content">Las unidades absolutas, como PX (pixeles), CM (centímetros) e IN (pulgadas), representan tamaños fijos y no cambian independientemente del contexto en el que se utilicen, proporcionando una medida exacta que puede ser útil para diseños que requieren precisión milimétrica.</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Unidades Relativas</span>
+                <p class="content">Las unidades relativas, como % (porcentaje), EM y REM, son flexibles y se adaptan en función de otros elementos. Por ejemplo, % es relativo al tamaño del contenedor padre, EM es relativo al tamaño de fuente del elemento padre y REM es relativo al tamaño de fuente del elemento raíz (HTML). Las unidades relativas son ideales para crear diseños responsivos, ya que permiten que los elementos del diseño cambien en respuesta al tamaño de la pantalla.</p>
+            </div>
+        </div>
+
+       
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Unidades de Vista de Ventana</span>
+                <p class="content">Las unidades de vista de ventana son herramientas que se ajustan dinámicamente al tamaño de la ventana gráfica del navegador. Las unidades de vista de ventana son:</p>
+                <ul>
+                    <li><strong>VW</strong>: Viewport Width, representa un porcentaje del ancho de la ventana, donde 1VW es igual al 1% del ancho total de la ventana.</li>
+                    <li><strong>VH</strong>: Viewport Height, representa un porcentaje de la altura de la ventana, donde 1VH es igual al 1% de la altura total de la ventana.</li>
+                    <li><strong>Vmin</strong>: Toma el valor mínimo entre el ancho y la altura de la ventana, lo que permite mayor adaptabilidad.</li>
+                    <li><strong>Vmax</strong>: Toma el valor máximo entre el ancho y la altura de la ventana, adaptándose mejor a la orientación de la pantalla.</li>
+                </ul>
+            </div>
+        </div>
+
+       
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Unidades Dinámicas de Vista de Ventana</span>
+                <p class="content">Las unidades dinámicas ofrecen mayor precisión en el diseño responsivo, ya que tienen en cuenta las variaciones de tamaño de la ventana gráfica en dispositivos móviles. Estas son:</p>
+                <ul>
+                    <li><strong>Dvh</strong>: Dynamic Viewport Height, representa el 1% de la altura de la ventana gráfica dinámica, ajustándose en tiempo real a los cambios en la interfaz de usuario.</li>
+                    <li><strong>Svh</strong>: Small Viewport Height, corresponde al 1% de la altura de la ventana gráfica más pequeña que el navegador ha registrado.</li>
+                    <li><strong>Lvh</strong>: Large Viewport Height, se refiere al 1% de la altura de la ventana gráfica más grande registrada, permitiendo diseñar para el máximo espacio disponible.</li>
+                </ul>
+                <p class="content">Las unidades dinámicas de vista de ventana son relativamente nuevas, por lo que el soporte en algunos navegadores puede variar. Los navegadores modernos como las últimas versiones de Chrome, Firefox, Safari y Edge suelen ser los primeros en implementar estas características.</p>
+            </div>
+        </div>
+
+    </div> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+
+</html>

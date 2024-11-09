@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOT</title>
+    <link rel="stylesheet" href="css_bit2.css">
+    <link rel="stylesheet" href="rootejem.css">
+    <link rel="stylesheet" href="menu_avansa/Untitled-1.css">
+</head>
+
+<body>
+
+
+    <section id="menu_desplave">
+        <div class="menu-container">
+            <button id="menu-toggle" class="menu-toggle">Menú</button>
+            <div id="menu" class="menu">
+              <ul>
+                <li><a href="index.html">Introducción al modelo flexbox </a></li>
+                <li><a href="imagenes_responsivas.html">Imágenes responsivas </a></li>
+                <li><a href="tipografia_responsiva.html">Tipografía responsiva </a></li>
+                <li><a href="root.html">root</a></li>
+                <li><a href="regla support.html">Regla support </a></li>
+                <li><a href="grid.html">Grid </a></li>
+                <li><a href="framework.html">Framework</a> </li>
+                <li><a href="first_movil.html">First móvil </a></li>
+                <li><a href="unidades_responsivas.html">unidades_responsivas</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <script src="menu_avansa/script.js"></script>
+    
+    </section>
+    <section id="titulo">
+        <img src="imagenes/SVG/tutulo.svg" alt="bit">
+        </section>
+       
+    
+<!-- script para cambio de color con root  -->
+       
+       <script>
+           const activadores = document.getElementsByClassName('activar');
+       
+           for (let i = 0; i < activadores.length; i++) {
+               activadores[i].addEventListener('click', function() {
+                   const listaOculta = this.nextElementSibling; 
+                   if (listaOculta.classList.contains('oculto')) {
+                       listaOculta.classList.remove('oculto');
+                       listaOculta.classList.add('visible');
+                   } else {
+                       listaOculta.classList.remove('visible');
+                       listaOculta.classList.add('oculto');
+                   }
+               });
+           }
+       </script>
+    
+
+
+
+
+    
+
+<script>
+    var x = document.querySelector(':root');
+
+    function mifuncion() {
+    x.style.setProperty('--main-color', 'black');
+    }
+</script>
+
+
+
+
+
+<h1>ROOT</h1>
+
+<section class="contenido">
+    <h2>El Selector: <B>:root</B></h2>
+    <p>El selector <b>:root </b>coincide con el elemento raíz del documento. En HTML, el elemento raíz es siempre el elemento html. 
+    <u> La sintaxis es la siguiente:</u></p>
+
+    <div class="codigo">:root { propiedad: valor; }</div>
+    
+    <p>En la mayoría de los casos, <b>:root</b> se refiere al elemento; html en una página web. 
+        También se puede usar con otros formatos de documentos, como SVG y XML.</p>
+    <p>  <b>La pseudo-clase:root</b>  puede referirse a diferentes elementos en esos casos. </p>   
+    <p> Independientemente del lenguaje de marcado, <b>:root</b> siempre seleccionará el elemento superior del documento.</p>
+    <p>Si bien la  <u>pseudo-clase:root</u> y el selector html representan los mismos elementos HTML, es útil saber 
+    que <b>:root</b> tiene una mayor especificidad, </p>
+   <p> ya que los selectores de pseudo-clases tienen una especificidad igual 
+    a la de una clase, que es más alta que un selector de elementos básicos.</p>
+ <p>  <u>La pseudo-clase :root</u> puede ser útil para declarar variables CSS globales.</p>
+   
+
+
+</section>
+
+<section class="contenido">
+    <h2>Propiedades Personalizadas – Variables CSS</h2>
+    <p>En CSS, las propiedades personalizadas (también conocidas como variables) 
+        son entidades que contienen valores específicos que se pueden volver a utilizar en un documento.</p>
+
+    <p> Los sitios web complejos tienen cantidades muy grandes de CSS, a menudo con una gran cantidad de valores repetidos.</p>
+    <p> Por ejemplo,<u>el mismo color se puede utilizar en cientos de lugares diferentes,</u>  lo cual requiere buscar y reemplazar globalmente
+           si necesitamos cambiar ese color. </p>
+    <p> <u>Las variables CSS</u> permiten que un valor se almacene en un lugar y luego se haga referencia en varios otros lugares.
+         Se declaran con la siguiente sintaxis:</p>
+    <div class="codigo">--nombre-variable: valor;</div>
+    <p>Y se invocan mediante la función var(), por ejemplo:</p>
+    <div class="codigo">propiedad: var(--nombre-variable);</div>
+    <p>Para declarar propiedades personalizadas (variables) se debe usar un nombre que comience con dos guiones</p>
+    <p>   <b>(--)</b>  y un valor que puede ser cualquier valor válido de CSS. Como cualquier otra propiedad,
+         se escribe dentro de las reglas CSS. Por ejemplo:</p> 
+    <div class="codigo">elemento { --main-color: red; }</div>
+    <p>Los nombres de las variables CSS distinguen entre mayúsculas y minúsculas, por ejemplo:</p>
+    <div class="codigo">--my-color</div>
+    <div class="codigo">--My-color</div>
+    <p>Son variables distintas.</p>
+    <p>Es importante el uso de identificadores semánticos. Por ejemplo:</p>
+    <div class="codigo">--main-text-color</div>
+    <p>De esta forma será más fácil de entender que:</p>
+    <div class="codigo">--color--</div>
+    <p>El alcance (ámbito) en el que podríamos usar la variable dependerá del selector donde se declara la variable. 
+        Una buena práctica es declarar variables en la pseudo-clase <b>:root </b> y así aplicarlas globalmente al documento HTML:</p>
+    <div class="codigo">:root { --main-bg-color: brown; }</div>
+</section>
+
+<section class="contenido">
+    <h2>Las Propiedades Personalizadas Se Heredan</h2>
+    <p>Lo que significa que si no se establece ningún valor para una propiedad personalizada 
+        en un elemento dado, se utiliza el valor de su elemento padre.</p>
+</section>
+
+<section class="contenido">
+    <h2>Variables CSS con JavaScript</h2>
+    <p>Las variables CSS tienen acceso al DOM, lo que significa que pueden ser cambiadas con JavaScript.</p>
+</section>
+
+
+
+
+<fieldset>
+    <button onclick="mifuncion()">ejemplo de CSS con :root</button>
+    </fieldset>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

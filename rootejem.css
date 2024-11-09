@@ -1,0 +1,44 @@
+:root{
+    --main-color: rgb(255, 255, 255);/* varibale global va a  funcionar en todo el documento*/
+    background-color: var(--main-color); /* varibles invocada*/ 
+}
+
+#caja{
+    --div-color: green; /* variable local solo funcionan en este div y en sus decendientes*/
+    background-color: blue;
+    background-color: var(--div-color);
+    color: var(--div-color);
+}
+#caja2{ /* hermano de caja no puede heredar*/
+    background-color: aquamarine;
+    background-color: var(--main-color); /* variable gloval */
+    background-color: var(--div-color); /* no puede heredar una varible local*/
+}
+
+
+.contenido {
+    line-height: 1.6;
+}
+
+.codigo {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+@media screen and (max-width: 720px) {
+    :root {
+        --main-color: green; /* cuando llegue a 720px los elementos tomaran el nuevo color de la variable glocal*/ 
+    }
+    
+}
+
+
+
+
+
+
+

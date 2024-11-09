@@ -1,0 +1,93 @@
+*{
+    border:2px solid rgba(255, 255, 255, 0) ;
+}
+ /* index general*/
+section p {
+    display: flex;
+ }
+
+#titulo{
+    display: flex;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    
+}
+
+.mapa{
+    display: flex;
+   justify-content: space-between;
+} 
+p a{
+    color: aliceblue;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+   
+    
+}
+nav p{
+    transition: background-color 0.3s;
+    margin-right: 20px;
+}
+nav p:hover {
+    background-color: #555;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+nav ul li a:hover {
+    background-color: #555;
+}
+
+section img{
+    max-width: 100%;
+}
+
+
+
+/*.img{
+    background-image: url(imagenes/mono.jpg);
+}
+/* en esta parte establecimos la primera imagen a usar la cual 
+puede ser de gran tamaño 
+y mejor calidad
+@media screen and (max-width:720px) {
+.img{
+    background-image: url(imagenes/mono2.jpg);
+}     
+}
+/* cuando llegamos a una pantalla de 720px la imagen de fondo 
+que usamos anteriormente en pantallas grandes se cambia por una imagen
+ similar a la anterior, pero con menos peso y
+ una calidad lo más eficiente posible*/
+
+ /*zana de pagina principal*/
+
+ .sec_1 ul{
+    width: 400px;
+    height: auto;
+    
+ }
+ .ima1{
+    width: 800px;
+    max-width: 100%;
+ }

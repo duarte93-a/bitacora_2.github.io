@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_bit2.css">
+    <link rel="stylesheet" href="menu_avansa/Untitled-1.css">
+    <title>imagenes responsable</title>
+</head>
+<body>
+    
+ 
+    <section id="menu_desplave">
+        <div class="menu-container">
+            <button id="menu-toggle" class="menu-toggle">Menú</button>
+            <div id="menu" class="menu">
+              <ul>
+                <li><a href="index.html">Introducción al modelo flexbox </a></li>
+                <li><a href="imagenes_responsivas.html">Imágenes responsivas </a></li>
+                <li><a href="tipografia_responsiva.html">Tipografía responsiva </a></li>
+                <li><a href="root.html">root</a></li>
+                <li><a href="regla support.html">Regla support </a></li>
+                <li><a href="grid.html">Grid </a></li>
+                <li><a href="framework.html">Framework</a> </li>
+                <li><a href="first_movil.html">First móvil </a></li>
+                <li><a href="unidades_responsivas.html">unidades_responsivas</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <script src="menu_avansa/script.js"></script>
+    
+    </section>
+    
+    
+
+
+
+    <section id="titulo">
+    <img src="imagenes/SVG/tutulo.svg" alt="bit">
+    </section>
+    
+       
+   
+
+
+ <h1>Manejo de imágenes en entornos responsivos</h1> 
+
+<section>
+    <p><h2>max-widht</h2></p>
+    <div>
+    <p>Cuando colocamos en una imagen el 100% de width siempre 
+        el elemento contenedor será el responsable del comportamiento 
+        de su tamaño, pero cuando una pantalla tiene tamaños grandes y 
+        la imagen está en formato jpg o 
+        png se empieza a distorsionar y pixelear. </p>
+    <p>Hay que tener cuidado con la propiedad with cuando el 
+        elemento contenedor es más grande en comparación con su imagen y la resolución de la
+         imagen ya que se vuelve más pesado.</p>
+    <p>Para evitar este tipo de problemas podemos usar la propiedad
+        <b> max-width</b> esto permite o mejor dicho evita que aumente de tamaño
+          más a ya de su tamaño original, pero si tiene la habilidad para
+           que se vuelva pequeña, evitando barras de scroll innecesarias, el problema es que se general los espacios en blanco,
+            si no existen otros elementos puede verse de manera rara los
+         márgenes blancos, hay que cuidar para evitarlo.</p> <br><br>
+
+
+    
+    <p>.img { Width-max: 100%}</p>
+    </div>
+    <img src="imagenes/perro_pug_a.jpg" alt="pug">
+    <p>Nota : en diseño responsivo ya no se puede colocar la propiedad widht directamente en la imagen ya que se interponen, aunque existen navegadores que pueden
+         filtrarlo por la especificidad.</p>
+</section>
+
+<section>
+    <p><h2>imagen en el fondo</h2></p>
+    <div>
+        <p>Cuando tenemos las imágenes en el fondo colocando en el css,
+             las imágenes de fondo también pueden responder al cambio de tamaño.
+             Esto puede ser de tres formas diferentes </p>
+        <ul>
+            <ol>Background-size: container: establece la propiedad background-size en contain, la imagen de fondo se escalará e intentará ajustarse al área de contenido.
+                 Sin embargo, la imagen mantendrá su relación de aspecto 
+                 (la relación proporcional entre el ancho y el alto de la imagen)</ol>
+            <ol>Background-size: 100% 100%; cuando la propiedad se establece
+                 en 100% 100%, la imagen de fondo se amplía para cubrir toda el área de contenido (la propiedad nos ayuda mucho siempre y cuando la imagen se puede adaptar a la perfección a los valores 100% 100%
+                 por ejemplo una bandera) </ol>
+            <ol>3.	Background size: cover; cuando la propiedad background-size
+                 se establece en “cover”, la imagen de fondo se escala para cubrir
+                  toda el área de contenido. El valor de “cover” mantienen la relación de aspecto, y parte de la imagen de fondo puede recortarse, hay que contemplar que estas siempre recortaran la imagen, dividirá la imagen en diferentes secciones, la cual tendremos utilizar la propiedad “background-position”: center rigth: a esta nos permite localizar que primero tome los cuadros del centro 
+                y luego de la derecha.</ol>
+        </ul>
+    </div>
+
+  <div>
+    <p>imagen Background-size: container</p>
+    <img src="imagenes/perro_pug_a.jpg" alt="pug">
+  </div>
+  <div>
+    <p>imagen Background-size: 100% 100%</p>
+    <img src="imagenes/perro_pug_a.jpg" alt="pug">
+  </div>
+  <div>
+    <p>imagen Background-size: cover</p>
+    <img src="imagenes/perro_pug_a.jpg" alt="pug">
+  </div>
+</section>
+
+<section>
+    <p><h2>ajuste de imagen por medio de @media queries</h2></p>
+    <div>
+        <p>Una imagen grande puede ser perfecta en una pantalla de 
+            computadora grande. Pero en pantallas de menor tamaño la 
+            imagen se vuelve muy pesada. Para reducir la carga, o cualquier 
+            otra razón, se puede usar media queries para mostrar diferentes
+             imágenes en diferentes dispositivos. Para entenderlo mejor colocaremos la misma imagen, pero con
+              reducciones o acomodos especiales que le permitan mejorar la 
+              carga sin
+             la pérdida de calidad, por ejemplo:</p>
+    <img src="imagenes/monoejem.jpg" alt="mono">
+    <p>Usando este tipo de métodos podemos mejorar la eficiencia 
+        de carga de nuestras páginas web sin que 
+        el usuario las perciba.</p>
+    </div>
+</section>
+
+<section>
+    <p><h2>Etiqueta picture </h2></p>
+    <div>
+        <p>El elemento “picture” funciona de una manera similar a
+             los elementos “video” y “audio”. Se pueden configurar diferentes
+              fuentes, y la primera fuente que se ajusta a las preferencias es
+               la que se esta utilizando. Muy similar al anterior punto con la
+                gran diferencia que esta será utilizada principalmente en el HTML
+             y no en el CSS como lo vimos anteriormente. <br><br>Por ejemplo:</p>
+             <img src="imagenes/monos.jpg" alt="monos">
+
+    </div>
+
+
+<picture>
+    <source srcset="imagenes/mono3.jpg" media="(max-widht:480px)">
+    <source srcset="imagenes/mono2.jpg" media="(max-widht:720px)">
+    <img src="imagenes/mono.jpg" style="width: 100%;"> 
+</picture>
+
+<p>Como Podemos notar al abrir la 
+    etiqueta picture tendré que colocar desde la
+     imagen más chica hasta la imagen más grande en ese orden 
+     si lo asemos al revés la computadora no lo comprenderá y no 
+     realizará alguna acción.</p>
+
+
+</section>
+
+
+
+
+
+
+    
+</body>
+</html>

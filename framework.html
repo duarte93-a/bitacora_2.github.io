@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frameworks CSS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="menu_avansa/Untitled-1.css">
+
+    <style>
+        body {
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .tabla-frameworks {
+            margin-top: 30px;
+        }
+        #titulo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #titulo img {
+            width: 80%; 
+            max-width: 600px; 
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section id="menu_desplave">
+        <div class="menu-container">
+            <button id="menu-toggle" class="menu-toggle">Menú</button>
+            <div id="menu" class="menu">
+              <ul>
+                <li><a href="index.html">Introducción al modelo flexbox </a></li>
+                <li><a href="imagenes_responsivas.html">Imágenes responsivas </a></li>
+                <li><a href="tipografia_responsiva.html">Tipografía responsiva </a></li>
+                <li><a href="root.html">root</a></li>
+                <li><a href="regla support.html">Regla support </a></li>
+                <li><a href="grid.html">Grid </a></li>
+                <li><a href="framework.html">Framework</a> </li>
+                <li><a href="first_movil.html">First móvil </a></li>
+                <li><a href="unidades_responsivas.html">unidades_responsivas</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <script src="menu_avansa/script.js"></script>
+    
+    </section>
+    
+    
+
+
+
+
+    <section id="titulo">
+        <img src="imagenes/SVG/tutulo.svg" alt="bit">
+    </section>
+
+   
+
+    <!-- Encabezado de la página -->
+    <div class="container">
+        <h2>Frameworks CSS</h2>
+        <p>Un <strong>framework CSS</strong> es un conjunto de herramientas, normalmente open source, con hojas de estilos y buenas prácticas de diseño web, que permiten al desarrollador generar entornos dinámicos, escalables y adaptables a las necesidades del usuario. También permite olvidarse de las tareas repetitivas y centrarse en los elementos únicos de cada diseño que pueden aportar valor a un sistema determinado.</p>
+
+        <!-- Tabla con los diferentes frameworks -->
+        <table class="highlight striped responsive-table">
+            <thead>
+                <tr>
+                    <th>Framework</th>
+                    <th>¿Qué es?</th>
+                    <th>Ventajas</th>
+                    <th>Enlace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Materialize</td>
+                    <td>Hoja de estilo en cascada, responsivo, robusto, cuyas bases de diseño las hereda de Google, especializada en entornos móviles.</td>
+                    <td>Fácil de adaptar a móvil, no requiere descarga, alta tasa de adaptabilidad a otros navegadores.</td>
+                    <td><a href="https://materializecss.com/" target="_blank">materializecss.com</a></td>
+                </tr>
+                <tr>
+                    <td>Bootstrap</td>
+                    <td>Estructura HTML, CSS y JavaScript que incluye varias plantillas con botones, menús, columnas, entre otros.</td>
+                    <td>Fácil uso, reutilizable, soporte por la misma comunidad, cuenta con documentación para su fácil utilización.</td>
+                    <td><a href="https://getbootstrap.com/" target="_blank">getbootstrap.com</a></td>
+                </tr>
+                <tr>
+                    <td>Bulma</td>
+                    <td>Hoja de estilo CSS basado en Flexbox que permite diseños responsivos y atractivos que no incluye JS.</td>
+                    <td>Adapta diseños flexibles sin necesidad de definir muchas reglas, puede modificar los archivos Sass para cambios de color, documentación clara.</td>
+                    <td><a href="https://bulma.io/" target="_blank">bulma.io</a></td>
+                </tr>
+                <tr>
+                    <td>Skeleton</td>
+                    <td>Estructura sencilla y ligera, utilizada para la creación de estructuras básicas y simples para el diseño de páginas de diferentes tamaños.</td>
+                    <td>Mejora la percepción de velocidad, reducción de frustración del usuario ante contenido no descargado, proporciona una experiencia de carga más fluida.</td>
+                    <td><a href="http://getskeleton.com/" target="_blank">getskeleton.com</a></td>
+                </tr>
+                <tr>
+                    <td>UI Kit</td>
+                    <td>Conjunto de elementos predefinidos que ayudan a diseñar interfaces de usuario de aplicaciones o sitios web de manera rápida y consistente.</td>
+                    <td>Permite el uso de bibliotecas con JS, contiene una gran variedad de elementos fáciles de personalizar, diseño coherente, flexible y escalable.</td>
+                    <td><a href="https://getuikit.com/docs/migration" target="_blank">getuikit.com</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Scripts de Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        // Inicialización del menú desplegable de Materialize
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, {
+                accordion: true // Hace que solo un panel se pueda abrir a la vez
+            });
+        });
+    </script>
+
+</body>
+</html>

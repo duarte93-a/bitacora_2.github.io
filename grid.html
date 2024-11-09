@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estile2.css">
+    <link rel="stylesheet" href="css_bit2.css">
+    <link rel="stylesheet" href="menu_avansa/Untitled-1.css">
+    <title>grid</title>
+</head>
+<body>
+
+    <section id="menu_desplave">
+        <div class="menu-container">
+            <button id="menu-toggle" class="menu-toggle">Menú</button>
+            <div id="menu" class="menu">
+              <ul>
+                <li><a href="index.html">Introducción al modelo flexbox </a></li>
+                <li><a href="imagenes_responsivas.html">Imágenes responsivas </a></li>
+                <li><a href="tipografia_responsiva.html">Tipografía responsiva </a></li>
+                <li><a href="root.html">root</a></li>
+                <li><a href="regla support.html">Regla support </a></li>
+                <li><a href="grid.html">Grid </a></li>
+                <li><a href="framework.html">Framework</a> </li>
+                <li><a href="first_movil.html">First móvil </a></li>
+                <li><a href="unidades_responsivas.html">unidades_responsivas</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <script src="menu_avansa/script.js"></script>
+    
+    </section>
+    
+
+
+    <section id="titulo">
+        <img src="imagenes/SVG/tutulo.svg" alt="bit">
+        </section>
+
+    <div class="grid-container">
+        <div class="grid-item item1"> 
+               
+
+        </div>
+        <div class="grid-item item2">
+            <h1>Modulo grid </h1>
+            
+            <p><b>Css grid layout </b>
+            Común mente se han utilizado varias estrategias de css para diseñar las paginas web. 
+            Priero se usa table, luego float position y display, pero todos estos métodos omiten funciones 
+            importantes (centrado vertical por ejemplo).
+            Grid es un sistema de diseño bidimensional basado en cuadriculas que en comparación con cualquiera sistema 
+            de diseño web del pasado, cambia por completo la forma en que diseñamos las interfaces de usuario. 
+             Grid fue creado especialmente para resolver los problemas de diseño. A diferencia de flexblox cuyo flujo unidireccional 
+             tiene diferentes casos de uso, grid permite definir un esquema de cuadricula
+            </p></div>
+        <div class="grid-item item3"> <h2>Soporte</h2> 
+            <p>Desde marzo de 2017, la mayoría de los navegadores ofrece soporte nativo sin prefijos para css grid</p>
+             <ul>
+                <ol>Chome </ol>
+                <ol>Firefox </ol>
+                <ol>Safari</ol>
+                <ol>Opera </ol>
+                <ol>Internet explorer (recientemente antes se usaba el prefijo -ms-)</ol>
+             </ul>
+          	
+            </div>
+        <div class="grid-item item4"><p> <h2>Display:grid;</h2>
+            Para comenzar, se debe definir un elemento contenedor como una cuadricula con:
+            Display:grid; todos los hijos directos del contenedor de la cuadricula se convierten automáticamente en elementos del grid.
+            </p></div>
+        <div class="grid-item item5"><p> <b>Grid colum </b>
+            Las líneas verticales de elementos grid son llamadas columnas 
+            <b>Grid rows</b>
+            Las líneas horizontales de elementos grid son llamadas rows
+            </p></div>
+        <div class="grid-item item6"><p> <h2>Grap</h2>
+            <b>Columna-gap</b>
+            Los espacios entre las columnas se pueden ajustar con al propiedad <b>columna-gap </b> 
+            Row -gap 
+            Los espacios entre los rows se pueden ajustar con la propiedad row- grap
+            Grap 
+            La propiedad gap resume las propiedades anteriores  
+            Ejemplo 10px 20 px
+            </p></div>
+        <div class="grid-item item7"> <h2>fr</h2>
+            <p>Fr es una unidad de medida de css grid 
+            Es la abreviatura de fracción y se utiliza para especificar fracciones del espacio disponible en una cuadricula css es útil cuando se quiere distribuir el espacio restante después de colocar elementos en la cuadricula 
+            Por ejemplo:
+            Grid-template-columns: 1fr 2fr;
+            Divide el espacio disponible en tres partes, asignando una fracción de la primera columna y dos fracciones ala segunda.</p>
+            </div>
+        <div class="grid-item item8"><h2>Grid-template-areas</h2> 
+           <p>El <b>Grid-template-areas</b> es una propiedad de css grid que permite definir
+             un esquema de cuadricula utilizando nombres de área personalizado en lugar de especificar
+              las líneas de la cuadricula con <b>grid-template-rows y grid-template-columns</b> <br><br>
+            
+           <b>Grid-column-start
+            Grid-column-end</b> 
+            Determina la ubicación de un elemento de la cuadricula haciendo referencia a líneas de cuadricula especificas   </p> 
+            </div>
+    </div>
+</body>
+</html>
+
+

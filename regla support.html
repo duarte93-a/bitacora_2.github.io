@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de @supports en CSS</title>
+    <!-- Enlace a la hoja de estilos de Materialize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="menu_avansa/Untitled-1.css">
+
+    <!-- Estilos adicionales -->
+    <style>
+        .section-title {
+            margin-top: 30px;
+        }
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<section id="menu_desplave">
+    <div class="menu-container">
+        <button id="menu-toggle" class="menu-toggle">Menú</button>
+        <div id="menu" class="menu">
+          <ul>
+            <li><a href="index.html">Introducción al modelo flexbox </a></li>
+            <li><a href="imagenes_responsivas.html">Imágenes responsivas </a></li>
+            <li><a href="tipografia_responsiva.html">Tipografía responsiva </a></li>
+            <li><a href="root.html">root</a></li>
+            <li><a href="regla support.html">Regla support </a></li>
+            <li><a href="grid.html">Grid </a></li>
+            <li><a href="framework.html">Framework</a> </li>
+            <li><a href="first_movil.html">First móvil </a></li>
+            <li><a href="unidades_responsivas.html">unidades_responsivas</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <script src="menu_avansa/script.js"></script>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Contenedor principal -->
+    <div class="container content-container">
+        <h1 class="center-align">Uso y Comprensión de la Regla @supports en CSS</h1>
+
+        <div class="section">
+            <h2 class="section-title">Objetivo</h2>
+            <p>El objetivo es el uso y comprensión de las reglas <code>@supports</code> en CSS para detectar la compatibilidad de características CSS en diferentes navegadores y aplicar estilos condicionales basados en esta compatibilidad, asegurando una experiencia de usuario consistente.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Mejora Progresiva y Degradación Elegante</h2>
+            <p><strong>Mejora progresiva:</strong> La mejora progresiva es una estrategia de diseño web que consiste en crear una versión básica de la funcionalidad para todos los navegadores y luego agregar características mejoradas para navegadores que las soporten.</p>
+            <p><strong>Degradación elegante:</strong> La degradación elegante, por otro lado, se refiere a la estrategia de crear la versión más avanzada de una funcionalidad y asegurarse de que se degrade de manera aceptable en navegadores más antiguos o menos capaces.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">@supports</h2>
+            <p>La regla <code>@supports</code> en CSS permite detectar si el navegador soporta una característica CSS específica y aplicar estilos condicionales basados en esta compatibilidad. Esto es útil para implementar funcionalidades modernas mientras se garantiza que los navegadores que no soportan esta característica aún presenten un diseño funcional.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Sintaxis de <code>@supports</code></h3>
+            <p>La estructura básica de <code>@supports</code> es la siguiente:</p>
+            <pre><code>@supports(propiedad: valor) {
+    elemento {
+        propiedad: valor;
+    }
+}</code></pre>
+            <p>Esto aplicará los estilos dentro del bloque <code>@supports</code> solo si la propiedad especificada es compatible con el navegador.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Condiciones de <code>@supports</code></h3>
+            <p>La regla <code>@supports</code> puede utilizar los siguientes operadores lógicos:</p>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><strong>AND</strong></div>
+                    <div class="collapsible-body">
+                        <p>Ambas condiciones deben ser verdaderas.</p>
+                        <pre><code>@supports(propiedad: valor) and (propiedad: valor) {
+    elemento {
+        propiedad: valor;
+    }
+}</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><strong>OR</strong></div>
+                    <div class="collapsible-body">
+                        <p>Al menos una de las condiciones debe ser verdadera.</p>
+                        <pre><code>@supports(propiedad: valor) or (propiedad: valor) {
+    elemento {
+        propiedad: valor;
+    }
+}</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><strong>NOT</strong></div>
+                    <div class="collapsible-body">
+                        <p>La condición debe ser falsa.</p>
+                        <pre><code>@supports not (propiedad: valor) {
+    elemento {
+        propiedad: valor;
+    }
+}</code></pre>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Buenas Prácticas</h3>
+            <ul>
+                <li><strong>Especificidad:</strong> Cuida que los estilos dentro de <code>@supports</code> cumplan con la especificidad y no afecten otros estilos.</li>
+                <li><strong>Eficiencia:</strong> Evita condiciones muy complejas que puedan afectar el rendimiento.</li>
+                <li><strong>Alternativas:</strong> Proporciona estilos alternativos para asegurar que el diseño sea funcional en navegadores que no soporten las características más modernas.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Soporte del Navegador</h2>
+            <p>La regla <code>@supports</code> tiene un buen soporte en los navegadores modernos, incluyendo las últimas versiones de:</p>
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Navegador</th>
+                        <th>Soporte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chrome</td>
+                        <td>28+</td>
+                    </tr>
+                    <tr>
+                        <td>Firefox</td>
+                        <td>22+</td>
+                    </tr>
+                    <tr>
+                        <td>Edge</td>
+                        <td>12+</td>
+                    </tr>
+                    <tr>
+                        <td>Internet Explorer</td>
+                        <td>No soportado</td>
+                    </tr>
+                    <tr>
+                        <td>Opera</td>
+                        <td>12.1+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Script de Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems);
+        });
+    </script>
+</body>
+</html>

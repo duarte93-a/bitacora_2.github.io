@@ -1,0 +1,72 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  #menu_desplave{
+  display: flex;
+  background-color: black;
+  height: 100%;
+  }
+  .menu-container {
+    position: relative;
+  }
+  
+  .menu-toggle {
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-toggle:hover {
+    background-color: #444;
+  }
+  
+  /* Estilos del menú */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -250px;  /* El menú comienza fuera de la pantalla */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .menu ul li {
+    margin: 15px 0;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .menu ul li a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Estilo cuando el menú está visible */
+  .menu.open {
+    left: 0;
+  }
+  

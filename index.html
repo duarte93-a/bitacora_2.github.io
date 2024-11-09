@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_bit2.css">
+    <link rel="stylesheet" href="menu_avansa/Untitled-1.css">
+    <title>bitacora 2</title>
+</head>
+<body>
+    
+    <section id="menu_desplave">
+        <div class="menu-container">
+            <button id="menu-toggle" class="menu-toggle">Menú</button>
+            <div id="menu" class="menu">
+              <ul>
+                <li><a href="index.html">Introducción al modelo flexbox </a></li>
+                <li><a href="imagenes_responsivas.html">Imágenes responsivas </a></li>
+                <li><a href="tipografia_responsiva.html">Tipografía responsiva </a></li>
+                <li><a href="root.html">root</a></li>
+                <li><a href="regla support.html">Regla support </a></li>
+                <li><a href="grid.html">Grid </a></li>
+                <li><a href="framework.html">Framework</a> </li>
+                <li><a href="first_movil.html">First móvil </a></li>
+                <li><a href="unidades_responsivas.html">unidades_responsivas</a></li>
+              </ul>
+            </div>
+          </div>
+        
+          <script src="menu_avansa/script.js"></script>
+    
+    </section>
+    
+
+
+ <section id="titulo">
+ <img src="imagenes/SVG/tutulo.svg" alt="bit">
+ </section>
+
+ 
+
+
+
+
+
+<!-- zona de flex padre  -->
+<section id="display_1">
+    <p> <h1>El modulo flex-box </h1></p>
+    <div>
+    <p>El módulo flex-box (contenedor flexible / flexible box) 
+        tiene como objetivo proporcionar una manera más eficiente de diseñar,
+         alinear y distribuir el espacio entre los elementos en un contenedor,
+          incluso cuando su tamaño es desconocido o 
+        dinámico, usando por lo tanto la palabra flex.  
+        La idea principal consta de otorgar al diseño “flexibilidad”
+             es decir la capacidad de poder modificar su ancho, alto y 
+             el orden de los elementos para llenar mejor los espacios
+              designados (esto es útil cuando desconocemos el tamaño y
+               proporciones del dispositivo al cual el usuario tiene, 
+               permitiéndole
+             su adaptación a cualquier tipo de pantalla).
+    Un contenedor flexible expande los elementos para 
+        llenar el espacio libre disponible o los reduce para 
+        evitar el desbordamiento.
+        Lo mas importante es que el diseño de flex-box es independiente de la dirección en lugar de los diseños regulares, si bien estos funcionan bien para las páginas, carecen de flexibilidad en aplicaciones de gran tamaño y complejidad, en especial cuando se trata de cambio de orientación, tamaño, estiramiento, encogimiento etc. 
+        </p>
+    </div>
+
+</section>
+
+<section class="sec_1">
+    <p><h2>Soportes de navegador</h2></p>
+    <div>
+        <p><b>linea de tiempo</b></p>
+        <ul>
+            <li>Display: flex; (sintaxis recién de la especificación).</li>
+            <li>Display: flexbox; (sintaxis no oficial de 2011).</li>
+            <li>Display: box; (sintaxis antigua de 2009).</li>
+        </ul>
+    
+
+    <img src="imagenes/navegadores .jpg" alt="navegadores" class="ima1">
+    <p>Nota: este modulo actualmente se encuentra como candidato recomendable del w3c a partir de octubre de 2017.  </p>
+</div>
+</section>
+
+
+
+
+<section><h1>Propiedades del padre de un contenedor flexible</h1></section> 
+
+<section class="sec_2">
+    <p><h2>Display: </h2></p>
+    <div>
+        <p>Esto define un contenedor flexible; en línea o bloque
+         en función del valor dado. Permite un contexto 
+        flexible para todos sus hijos directos.</p>
+
+         <p> <i>.container {display: flex; (0 inline-flex)}</i></p>
+    </div>
+</section>
+
+<section id="f_direction">
+    <p><h2>Flex-direction:</h2></p>
+    <div>
+    <p>Esto establece el eje principal, definiendo la dirección
+         en que se colocan los elementos flexibles en el contenedor,
+          flex-blox es un conjunto de diseño de una sola dirección.
+         Estos pueden ser en elementos horizontales o verticales.</p>
+
+    <p>.container {flex-direction: row / row-reverse/ column/ column-reverse;}</p>
+    </div>
+    <img src="imagenes/popdirection.jpg" alt="direction">
+<!-- codigo para cambio de imagen  -->
+    <div>
+        
+        <style>
+            #imagePreview {
+                max-width: 300px;
+                max-height: 300px;
+                display: none;
+                margin-top: 20px;
+            }
+        </style>
+    
+    
+        <h1>Seleccion de display</h1>
+        <select id="imageSelector">
+            <option value="">Selecciona una imagen</option>
+            <option value="dc.jpg">display column</option>
+            <option value="dcr.jpg">display column-reverse</option>
+            <option value="dr.jpg">display row</option>
+            <option value="drr.jpg">display row-reverse</option>
+        </select>
+    <img src="" alt="">
+        <img id="imagePreview" alt="Vista previa de la imagen">
+    
+        <script>
+            const imageSelector = document.getElementById('imageSelector');
+            const imagePreview = document.getElementById('imagePreview');
+    
+            // Ruta base donde se encuentran las imágenes
+            const imagePath = 'imagenes/1x/'; // Cambia esto a la ruta correcta
+    
+            imageSelector.addEventListener('change', function() {
+                const selectedValue = imageSelector.value;
+    
+                if (selectedValue) {
+                    imagePreview.src = imagePath + selectedValue;
+                    imagePreview.style.display = 'block';
+                } else {
+                    imagePreview.style.display = 'none';
+                }
+            });
+        </script>
+
+
+
+
+
+
+
+    </div>
+
+</section>
+
+
+<section id="f_wrap">
+    <h2>Flex-wrap</h2>
+    <div>
+     <p>   Por defecto, todos los elementos intentaras encajar
+         en una línea. Puede cambiar eso y permitir que los elementos
+         se ajusten según sea necesario con esta propiedad.
+     </p>
+    <p>.container {flex-wrap: nowrap /wrap/wrap-reverse;}</p>
+</div>
+<img src="imagenes/popwrap.jpg" alt="wrap">
+<div>
+    <style>
+        #imagePreview2 {
+            max-width: 300px;
+            max-height: 300px;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+
+    <h1>Selección de flex wrap</h1>
+    <select id="imageSelector2">
+        <option value="">Selecciona una imagen</option>
+        <option value="nrp.jpg">nowrap</option>
+        <option value="wrap.jpg">wrap</option>
+        <option value="wrr.jpg">wrap-reverse</option>
+    </select>
+    <img id="imagePreview2" alt="Vista previa de la imagen">
+
+    <script>
+        const imageSelector2 = document.getElementById('imageSelector2');
+        const imagePreview2 = document.getElementById('imagePreview2');
+        const imagePath2 = 'imagenes/2x/'; // Asegúrate de que esta ruta sea correcta
+
+        imageSelector2.addEventListener('change', function() {
+            const selectedValue2 = imageSelector2.value;
+
+            if (selectedValue2) {
+                imagePreview2.src = imagePath2 + selectedValue2; // La extensión .jpg ya está en el value
+                imagePreview2.style.display = 'block';
+            } else {
+                imagePreview2.style.display = 'none';
+            }
+        });
+    </script>
+</div>
+    
+
+
+
+
+
+ 
+</div>
+</section>
+
+
+<section id="f_flow">
+    <h2>flex-flow</h2>
+    <div>
+        <p>Esta es una abreviatura de propiedad de flex-direction y
+             flex-wrap, que juntas definen los ejes principales y transversal 
+             del contenedor flexible,
+             el valor que esta determinado es la de row noweap.</p>
+
+        <p> Flex-flow: <”flex-direction”> // <”flex-wrap> /p>     
+    </div>
+   
+</section>
+
+<section id="jc">
+    <h2>justify-content</h2>
+    <div>
+        <p>Esto define la alineación a lo largo del eje principal,
+             ayudando a distribuir el espacio libre adicional que sobra
+              cuando todos los elementos flexibles de una línea son inflexibles 
+              o flexibles, pero han alcanzado su tamaño máximo, además de ejercer 
+              cierto control sobre la alineación de los 
+            elementos cuando se desbordan en la línea.</p>
+    </div>
+    <img src="imagenes/popjustifi.jpg" alt="justify">
+</section>
+
+<div>
+    <style>
+        #imagePreview3 {
+            max-width: 300px;
+            max-height: 300px;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+
+    <h1>Selección de justify-content</h1>
+    <select id="imageSelector3">
+        <option value="">Selecciona una imagen</option>
+        <option value="center.png">center</option>
+        <option value="fend.png">flex-end</option>
+        <option value="fstart.png">flex-start</option>
+        <option value="saro.png">space-araund</option>
+        <option value="sbet.png">space-between</option>
+        <option value="seven.png">space-evenly</option>
+    </select>
+    <img id="imagePreview3" alt="Vista previa de la imagen">
+
+    <script>
+        const imageSelector3 = document.getElementById('imageSelector3');
+        const imagePreview3 = document.getElementById('imagePreview3');
+        const imagePath3 = 'imagenes/x3/'; // Asegúrate de que esta ruta sea correcta
+
+        imageSelector3.addEventListener('change', function() {
+            const selectedValue3 = imageSelector3.value;
+
+            if (selectedValue3) {
+                imagePreview3.src = imagePath3 + selectedValue3; // La extensión .jpg ya está en el value
+                imagePreview3.style.display = 'block';
+            } else {
+                imagePreview3.style.display = 'none';
+            }
+        });
+    </script>
+</div>
+
+<section id="ali">
+
+    <h2>Align-items</h2>
+    <div>
+        <p>Esto define el comportamiento predeterminado de como los
+             elementos flexibles se distribuyen a lo largo del eje trasversal
+              en la línea actual. pensé en ello como la 
+            versión de justify-content para el eje trasversal.</p> <br>
+
+        <p>.conteiner { align-items: stretch/ flex-start / flex-end / center/ baseline}</p>
+    </div>
+    <img src="imagenes/popitem.jpg" alt="item">
+</section>
+
+<div></div>
+    <style>
+        #imagePreview4 {
+            max-width: 300px;
+            max-height: 300px;
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+
+    <h1>Selección de Align-items</h1>
+    <select id="imageSelector4">
+        <option value="">Selecciona una imagen</option>
+        <option value="base.png">baseline</option>
+        <option value="ce.png">center</option>
+        <option value="fen.png">flex-end</option>
+        <option value="fst.png">flex-start</option>
+        <option value="st.png">stretch</option>
+    </select>
+    <img id="imagePreview4" alt="Vista previa de la imagen">
+
+    <script>
+        const imageSelector4 = document.getElementById('imageSelector4');
+        const imagePreview4 = document.getElementById('imagePreview4');
+        const imagePath4 = 'imagenes/4x/'; // Asegúrate de que esta ruta sea correcta
+
+        imageSelector4.addEventListener('change', function() {
+            const selectedValue4 = imageSelector4.value;
+
+            if (selectedValue4) {
+                imagePreview4.src = imagePath4 + selectedValue4; // La extensión .jpg ya está en el value
+                imagePreview4.style.display = 'block';
+            } else {
+                imagePreview4.style.display = 'none';
+            }
+        });
+    </script>
+</div>
+
+
+<section id="alc">
+    <h2>Aling-content</h2>
+    <div>
+     <p>Esta propiedad alinea los renglones de un contenedor
+         flexible cuando hay espacio extra en el eje trasversal, 
+         de manera similar a como justify-content alinea elementos
+         individuales dentro del eje principal.</p><br>
+     <p>.container { aling-content: flex-start / flex-end/ center/ space-between / space-araund / stretch;}</p>
+    </div>
+    <img src="imagenes/popcont.jpg" alt="cont">
+    <p>Nota esta propiedad no tiene efecto cuando solo hay una línea de elementos flexibles.</p>
+</section>
+
+</div>
+<style>
+    #imagePreview5 {
+        max-width: 300px;
+        max-height: 300px;
+        display: none;
+        margin-top: 20px;
+    }
+</style>
+
+<h1>Selección de Align-content</h1>
+<select id="imageSelector5">
+    <option value="">Selecciona una imagen</option>
+    <option value="c.png">center</option>
+    <option value="fe.png">flex-end</option>
+    <option value="fs.png">flex-start</option>
+    <option value="sbet.png">space-between</option>
+    <option value="spaa.png">space-araund</option>
+    <option value="ste.png">stretch</option>
+</select>
+<img id="imagePreview5" alt="Vista previa de la imagen">
+
+<script>
+    const imageSelector5 = document.getElementById('imageSelector5');
+    const imagePreview5 = document.getElementById('imagePreview5');
+    const imagePath5 = 'imagenes/x5/'; // Asegúrate de que esta ruta sea correcta
+
+    imageSelector5.addEventListener('change', function() {
+        const selectedValue5 = imageSelector5.value;
+
+        if (selectedValue5) {
+            imagePreview5.src = imagePath5 + selectedValue5; // La extensión .jpg ya está en el value
+            imagePreview5.style.display = 'block';
+        } else {
+            imagePreview5.style.display = 'none';
+        }
+    });
+</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+<section id="grap">
+    <p><h2>grap</h2></p>
+    <div>
+        <p>la propiedad gap controla el espacio entre elementos flexibles.
+             Se aplica ese espacio
+             solo entre elementos que no están en los bordes exteriores.</p>
+        <p>Gap:10px 20px</p>     
+    </div>
+</section>
+
+<!-- zona de flex del hijo  -->
+
+<h1>Las propiedades para los hijos de flex-blox </h1>
+
+<section id="orden">
+    <h2> orden </h2>
+    <div>
+     <p>Los elementos flexibles se colocarán según el orden
+         donde los colocamos, sin embargo, la propiedad orden controla
+          el orden en 
+        el que aparece en el contendedor flexible </p> <br>
+    
+    <p>. ítem {orden: número entero;/*por default es 0*/}</p>
+    </div>
+
+    <div>
+        <img src="imagenes/Nueva carpeta/orden.png" alt="orden">
+    </div>
+    <p>Nota: Todos los elementos del contenedor tienen 0 por 
+        lo que podemos acomodarlos en el orden que deseamos,
+         podemos usar además números negativos.</p>
+</section>
+
+<section id="fg">
+    <p><h2>Flex-glow</h2></p>
+    <div>
+    <p>Define la capacidad para un ítem crezca si es necesario, 
+        este acepta un valor entero que sirve como proporción, indicando 
+        la cantidad de espacio disponible dentro del contenedor flexible 
+        debe ocupar el ítem. El numero entero permite el crecimiento
+         en unidades. Este siempre comienza en cero.</p>
+    <p>. item {Flex-grow: numero entero; /*por default es 0*/} </p>
+    </div>
+    <img src="imagenes/popglow.jpg" alt="glow">
+    <p>Nota Los números negativos no son válidos, 
+        flex-grow 0 no permite el crecimiento más 
+        allá de los pixeles designados.</p>
+    <div>
+        <img src="imagenes/Nueva carpeta/contes.png" alt="crecimiento">
+        <img src="imagenes/Nueva carpeta/contec.png" alt="screcimiento">
+    </div>
+</section>
+
+<section id="fs">
+    <h2>flex-shink</h2>
+    <div>
+        <p>Especifica la capacidad de un elemento para reducir
+             en relación con el resto 
+            de los elementos flexibles del contenedor</p>
+        <p>.item{ flex shirink; numero entero/* por default es 1*/}</p>
+    </div>
+    <img src="imagenes/popshrin.jpg" alt="shirink">
+    <div>
+       <img src="imagenes/Nueva carpeta/reduccion.png" alt="reduccion">
+       <img src="imagenes/Nueva carpeta/elereduccion.png" alt="elereducido">
+    </div>
+</section>
+
+
+<section id="fb">
+    <h2>flex basis</h2>
+    <div>
+        <p>Esto define el tamaño predeterminado de un elemento antes
+             de distribuir el espacio restante. Puede ser una longitud
+             (por ejemplo 20%,5rem, etc.). o una palabra clave </p>
+        <p>Flex-basis: numero / auto/innitial/inherit;</p>
+        <p>Las palabras clave puede ser: <br><br>
+            Flex-bases:fill/max-content/main.content/fit-content;
+            </p>
+    </div>
+    <img src="imagenes/popbasis.jpg" alt="basis">
+    <img src="imagenes/popbasis2.jpg" alt="basis2">
+    <p>Nota si se establece en 0, el espacio adicional alrededor
+         del contenido no se toma en cuenta. Si se configura en auto,
+          el espacio adicional 
+        se distribuye según su valor de flex-grow</p>
+</section>
+
+
+<section id="as">
+    <h2>Aling-self </h2>
+    <div>
+        <p>Esto permite que la alineación predeterminada 
+            (o la especificada por align-items) se anule para los elementos 
+            flex específicos, tenga en cuenta que las propiedades float, clear 
+            y vertical-aling no tienen efecto en un elemento flexible.</p>
+        <p>.flex-item{ align-self; flex-start / flex-end / center / baseline / stretch}</p>
+    </div>
+    <img src="imagenes/popself.jpg" alt="self">
+   
+</section>
+
+
+
+<!-- zona de flex del hijo  -->
+
+
+
+
+
+
+
+
+   
+
+
+    
+</body>
+
+<footer></footer>
+</html>
