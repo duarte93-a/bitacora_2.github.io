@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_bit2.css">
     <link rel="stylesheet" href="menu_avansa/Untitled-1.css">
+    <link rel="stylesheet" href="imagenes_responsivas.css">
     <title>imagenes responsable</title>
 </head>
 <body>
@@ -68,7 +69,7 @@
     
     <p>.img { Width-max: 100%}</p>
     </div>
-    <img src="imagenes/perro_pug_a.jpg" alt="pug">
+    <img src="imagenes/perro_pug_a.jpg" alt="pug" style="max-width: 100%;">
     <p>Nota : en diseño responsivo ya no se puede colocar la propiedad widht directamente en la imagen ya que se interponen, aunque existen navegadores que pueden
          filtrarlo por la especificidad.</p>
 </section>
@@ -95,15 +96,15 @@
 
   <div>
     <p>imagen Background-size: container</p>
-    <img src="imagenes/perro_pug_a.jpg" alt="pug">
+    <div class="foto"></div>
   </div>
   <div>
     <p>imagen Background-size: 100% 100%</p>
-    <img src="imagenes/perro_pug_a.jpg" alt="pug">
+   <div class="foto2 foto"></div>
   </div>
   <div>
     <p>imagen Background-size: cover</p>
-    <img src="imagenes/perro_pug_a.jpg" alt="pug">
+ <div class="foto3 foto"></div>
   </div>
 </section>
 
@@ -139,17 +140,18 @@
     </div>
 
 
-<picture>
-    <source srcset="imagenes/mono3.jpg" media="(max-widht:480px)">
-    <source srcset="imagenes/mono2.jpg" media="(max-widht:720px)">
-    <img src="imagenes/mono.jpg" style="width: 100%;"> 
-</picture>
+    <picture>
+      <source srcset="imagenes/mono3.jpg" media="(max-width:480px)">
+      <source srcset="imagenes/mono2.jpg" media="(max-width:720px)">
+      <img src="imagenes/mono.jpg" style="width: 100%;"> 
+  </picture>
 
 <p>Como Podemos notar al abrir la 
     etiqueta picture tendré que colocar desde la
      imagen más chica hasta la imagen más grande en ese orden 
      si lo asemos al revés la computadora no lo comprenderá y no 
      realizará alguna acción.</p>
+<p>para observar el cambio utilice las herramientas del desarrollador</p>
 
 
 </section>

@@ -12,6 +12,8 @@
   display: flex;
   background-color: black;
   height: 100%;
+  position: sticky;
+  top: 0px;
   }
   .menu-container {
     position: relative;
@@ -36,7 +38,7 @@
   .menu {
     position: fixed;
     top: 0;
-    left: -250px;  /* El menú comienza fuera de la pantalla */
+    left: -250px;
     width: 250px;
     height: 100%;
     background-color: #333;
@@ -65,7 +67,7 @@
     color: #00bcd4;
   }
   
-  /* Estilo cuando el menú está visible */
+
   .menu.open {
     left: 0;
   }
